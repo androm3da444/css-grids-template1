@@ -1,0 +1,31 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(80px, auto));
+  //grid-gap: 5px;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+.container div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.one{
+  background: blue;
+  grid-area: header;
+}
+.two{
+  background: lightgreen;
+  grid-area: main;
+}
+.three{
+  background: silver;
+  grid-area: sidebar;
+}
+.four{
+  background: orange;
+  grid-area: footer;
+}
